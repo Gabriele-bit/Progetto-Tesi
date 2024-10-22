@@ -1,16 +1,12 @@
 package edu.unict.magazon.Controllers;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import edu.unict.magazon.MagazonNPLService;
 import edu.unict.magazon.MagazonFunctions;
 
@@ -28,8 +24,8 @@ public class MagazonController {
     @GetMapping("/gestisci")
     public String handleRequest(@RequestBody String userInput) {
         String openAIresponse = openAIService.sendOpenAI(userInput);
+
         ObjectMapper objectMapper = new ObjectMapper();
-        
         try {
             // Mappa la risposta in un HashMap
             Map<String, Object> responseMap = objectMapper.readValue(openAIresponse, HashMap.class);
@@ -45,7 +41,7 @@ public class MagazonController {
                     String productName = (String) arguments.get("name");
                     int quantity = (int) arguments.get("quantity");
 
-                    // Prepara i parametri per la funzione
+                    //Prepara i parametri per la funzione
                     Map<String, Object> params = new HashMap<>();
                     params.put("nome", productName);
                     params.put("quantita", quantity);
