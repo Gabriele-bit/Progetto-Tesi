@@ -11,5 +11,4 @@ public class MagazonIndexController {
     public String index(){
         return "index";
     }
-
 }

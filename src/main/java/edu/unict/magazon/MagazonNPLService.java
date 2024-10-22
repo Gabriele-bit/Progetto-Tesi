@@ -10,13 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
+
 @Service
 // Classe per l'interazione con Open AI.
 public class MagazonNPLService {
-
-
         private String openaiApiKey= System.getenv("openai.api.key");
-
         @Value("${openai.api.url}")
         private String openaiApiUrl;
 
@@ -27,7 +25,7 @@ public class MagazonNPLService {
                         // il corpo della richiesta API è una hashmap
                         Map<String, Object> body = new HashMap<>();
                         // Si specifica il modello
-                        body.put("model", "gpt-4-0613");
+                        body.put("model", "gpt-3.5-turbo");
                         // Si crea un array messagges che contiene un solo elemento
                         body.put("messages", new Object[] {
                                         Map.of("role", "user", "content", userInput)

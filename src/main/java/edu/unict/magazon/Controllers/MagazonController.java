@@ -4,11 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.unict.magazon.MagazonNPLService;
 import edu.unict.magazon.MagazonFunctions;
+import org.springframework.http.ResponseEntity;
 
 @Controller
 @RequestMapping("/magazon")
@@ -21,10 +23,15 @@ public class MagazonController {
         this.openAIService = openAIService;
     }
 
-    @GetMapping("/gestisci")
-    public String handleRequest(@RequestBody String userInput) {
+    @PostMapping("/gestisci")
+    //restituisce una risposta http (corpo, headers e stato)
+    public ResponseEntity<String> handleRequest(@RequestBody String userInput) {
         String openAIresponse = openAIService.sendOpenAI(userInput);
-
+        //se non è un json (cioè openAIresponse mi sta restitendo un errore, da correggere in seguito)
+        if (!openAIresponse.startsWith("{")) {
+            return ResponseEntity.badRequest().body("{\"message\": \"Risposta non valida da OpenAI\"}");
+        }
+        //altrimenti lo mappo in un hashmap
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             // Mappa la risposta in un HashMap
@@ -47,20 +54,20 @@ public class MagazonController {
                     params.put("quantita", quantity);
 
                     // Chiama la funzione di aggiunta prodotto
-                    return magazonFunctions.newProductFunction().apply(params);
+                    String responseMessage = magazonFunctions.newProductFunction().apply(params);
+                    return ResponseEntity.ok("{\"message\": \"" + responseMessage + "\"}");
                 }
                 // Qui puoi aggiungere il supporto per altre funzioni
             }
-        } catch (IOException e) {
-            // Gestione dell'errore di lettura JSON
-            e.printStackTrace();
-            return "Errore durante la gestione della richiesta";
-        } catch (ClassCastException e) {
-            // Gestione dell'errore di tipo
-            e.printStackTrace();
-            return "Errore durante il casting degli oggetti";
-        }
+            //la risposta di OpenAI non contiene una funzione da chiamare
+            return ResponseEntity.badRequest().body("{\"message\": \"Richiesta non riconosciuta...\"}");
 
-        return "Richiesta non riconosciuta...";
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body("{\"message\": \"Errore nella lettura del JSON\"}");
+        } catch (ClassCastException e) {
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body("{\"message\": \"Errore durante il casting degli oggetti\"}");
+        }
     }
 }
