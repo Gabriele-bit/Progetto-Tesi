@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Product</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom right, #38A2D7, #561139);
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        form {
+            border: 2px solid black;
+            padding: 20px;
+            display: inline-block;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        form input, form select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #38A2D7;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2f89b5;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Add a new product</h1>
+        <form action="#" th:action="@{/product}" th:object="${product}" method="POST">
+            <label for="product_id">ID</label>
+            <input type="number" readonly th:field="*{product_id}" th:disable="${product.product_id==0}" id="product_id">
+            
+            <label for="name">Name</label>
+            <input type="text" required th:field="*{name}" id="name">
+            
+            <label for="description">Description</label>
+            <input type="text" required th:field="*{description}" id="description">
+            
+            <label for="category_id">Category:</label>
+            <select th:field="*{category_id}" id="category_id">
+                <option th:each="category : ${categories}" th:value="${category.category_id}"
+                    th:text="${category.category_name}"></option>
+            </select>
+            
+            <label for="price">Price</label>
+            <input type="number" required th:field="*{price}" id="price">
+            
+            <label for="quantity">Quantity</label>
+            <input type="number" required th:field="*{quantity}" id="quantity">
+            
+            <button type="submit">Conferma</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

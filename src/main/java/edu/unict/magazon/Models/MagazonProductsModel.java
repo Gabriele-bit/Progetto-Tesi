@@ -11,7 +11,7 @@ public class MagazonProductsModel {
     private String name;
     private String description;
     private float price;
-    private int quantity;;
+    private int quantity;
 
     @ManyToOne
     @JoinColumn(name = "category_id")

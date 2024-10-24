@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+    <div>
+        <h1>Our Products</h1>
+        Products: <span th:text="${#lists.size(products)}"></span>
+        <p th:each="product : ${products}">
+            Name: <span th:text="${product.name}"></span><br>
+            Description: <span th:text="${product.description}"></span><br>
+            Category <span th:text="${product.category_id.category_name}"></span><br>
+            Price <span th:text="*{product.price}"></span><br>
+            Qauntity <span required th:text="*{product.quantity}"></span><br>
+        </p>
+
+        <a th:href="@{/product}">Crea nuovo</a>
+    </div>
+
+</body>
+
+</html>
