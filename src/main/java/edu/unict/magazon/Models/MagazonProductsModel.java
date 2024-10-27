@@ -12,6 +12,7 @@ public class MagazonProductsModel {
     private String description;
     private float price;
     private int quantity;
+    private String image_url;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
@@ -76,4 +77,14 @@ public class MagazonProductsModel {
     public void setSupplier_id(MagazonSuppliersModel supplier_id) {
         this.supplier_id = supplier_id;
     }
+
+    
+    public String getImageUrl() {
+        return image_url;
+    }
+
+    public void setImageUrl(String image_url) {
+        this.image_url = image_url;
+    }
+
 }

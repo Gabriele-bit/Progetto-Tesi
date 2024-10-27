@@ -3,14 +3,56 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import {createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Products from './Components/Products';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App></App>,
+  },
+  {
+    path: "/Prodotti",
+    element: <Products></Products>,
+  },
+  {
+    path: "/Carrello",
+    element: <App></App>,
+  },
+  {
+    path: "/Wishlist",
+    element: <App></App>,
+  },
+  {
+    path: "/Profilo",
+    element: <App></App>,
+  },
+  {
+    path: "/About",
+    element: <App></App>,
+  },
+  // {
+  //   path: "/singlecard/:cardID",
+  //   element: <SingleCard />,
+  // },
+  // {
+  //   path: "/CardChildren",
+  //   element: <CardChildren></CardChildren>,
+  //   children: [
+  //     {
+  //       path: ":cardID",
+  //       element: <SingleCard></SingleCard>
+  //     },
+  //   ],
+  // }
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <App />
-  </BrowserRouter>,
+  </BrowserRouter> */}
+  <RouterProvider router={router} />
   </React.StrictMode>
 );
 

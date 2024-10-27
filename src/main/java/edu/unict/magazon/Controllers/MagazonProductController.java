@@ -1,5 +1,4 @@
 package edu.unict.magazon.Controllers;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,14 +6,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
 import edu.unict.magazon.Models.MagazonProductsModel;
 import edu.unict.magazon.Repositories.MagazonCategoriesRepository;
 import edu.unict.magazon.Repositories.MagazonProductsRepository;
 
 @Controller
-@RequestMapping("/product")
+@RequestMapping("/Prodotto")
 public class MagazonProductController {
     private final MagazonProductsRepository products_repository;
     private final MagazonCategoriesRepository categories_repository;

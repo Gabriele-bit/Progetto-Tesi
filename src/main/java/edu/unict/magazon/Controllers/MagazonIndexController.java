@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MagazonIndexController {
 
-     @RequestMapping(value = {"/", "/prodotti", "/carrello", "/wishlist", "/profilo"})
+     @RequestMapping(value = {"/", "/Prodotti", "/Carrello", "/Wishlist", "/Profilo"})
     public String index(){
         return "forward:/index.html";
     }

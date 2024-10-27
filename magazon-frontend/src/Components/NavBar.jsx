@@ -1,26 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "../css/NavBar.css"
 function NavBar() {
     return (
         <div>
             <ul>
                 <li>
-                    <Link to={"/"} activeClassName="active">Home </Link>
+                    <NavLink to={"/"} activeClassName="active">Home </NavLink>
                 </li>
                 <li>
-                    <Link to={"/" }activeClassName="active">Prodotti</Link>
+                    <NavLink to={"/Prodotti" }activeClassName="active">Prodotti</NavLink>
                 </li>
                 <li>
-                    <Link to={"/"} activeClassName="active">Carrello</Link>
+                    <NavLink to={"/Carrello"} activeClassName="active">Carrello</NavLink>
                 </li>
                 <li>
-                    <Link to={"/"} activeClassName="active">Wishlist</Link>
+                    <NavLink to={"/Wishlist"} activeClassName="active">Wishlist</NavLink>
                 </li>
                 <li>
-                    <Link to={"/"} activeClassName="active">Profilo</Link>
+                    <NavLink to={"/Profilo"} activeClassName="active">Profilo</NavLink>
                 </li>
                 <li>
-                    <Link to={"/"} activeClassName="active">About</Link>
+                    <NavLink to={"/About"} activeClassName="active">About</NavLink>
                 </li>
             </ul>
         </div>
