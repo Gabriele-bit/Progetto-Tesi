@@ -18,7 +18,7 @@
     height: 200px;
     margin: 0 auto 20px;
     /* max-width: 150px; */
-    width: 100%;
+    /* width: 100%; */
     object-fit: cover;
 }
 
@@ -56,4 +56,8 @@
 
 .add-to-cart-button:hover {
     background-color: #8e7a4e; 
+}
+
+.product_category{
+    font: 20px;
 }

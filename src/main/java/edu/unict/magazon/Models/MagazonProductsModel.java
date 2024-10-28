@@ -16,11 +16,11 @@ public class MagazonProductsModel {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private MagazonCategoriesModel category_id;
+    private MagazonCategoriesModel category;
 
     @ManyToOne
     @JoinColumn(name = "supplier_id")
-    private MagazonSuppliersModel supplier_id;
+    private MagazonSuppliersModel supplier;
 
     public Integer getProduct_id() {
         return product_id;
@@ -62,23 +62,6 @@ public class MagazonProductsModel {
         this.quantity = quantity;
     }
 
-    public MagazonCategoriesModel getCategory_id() {
-        return category_id;
-    }
-
-    public void setCategory_id(MagazonCategoriesModel category_id) {
-        this.category_id = category_id;
-    }
-
-    public MagazonSuppliersModel getSupplier_id() {
-        return supplier_id;
-    }
-
-    public void setSupplier_id(MagazonSuppliersModel supplier_id) {
-        this.supplier_id = supplier_id;
-    }
-
-    
     public String getImageUrl() {
         return image_url;
     }
@@ -87,4 +70,19 @@ public class MagazonProductsModel {
         this.image_url = image_url;
     }
 
+    public MagazonCategoriesModel getCategory() {
+        return category;
+    }
+
+    public void setCategory(MagazonCategoriesModel category) {
+        this.category = category;
+    }
+
+    public MagazonSuppliersModel getSupplier() {
+        return supplier;
+    }
+
+    public void setSupplier(MagazonSuppliersModel supplier) {
+        this.supplier = supplier;
+    }
 }

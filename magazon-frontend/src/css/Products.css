@@ -1,7 +1,42 @@
-
-.CardsContainer{
+.CardsContainer {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
     align-items: center;
+    margin-left: 10px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.searchBar {
+    flex: 1;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(141, 141, 141);
+    outline: none;
+    margin-left: 30px;
+}
+
+#filter {
+    flex: 0.1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    border-radius: 20px;
+    margin-right: 30px;
+}
+
+svg {
+    margin-left: 30px;
+    cursor: pointer;
+    color: #ffffff;
 }

@@ -11,7 +11,7 @@ import edu.unict.magazon.Repositories.MagazonCategoriesRepository;
 import edu.unict.magazon.Repositories.MagazonProductsRepository;
 
 @Controller
-@RequestMapping("/Prodotto")
+@RequestMapping("/api/prodotto")
 public class MagazonProductController {
     private final MagazonProductsRepository products_repository;
     private final MagazonCategoriesRepository categories_repository;
