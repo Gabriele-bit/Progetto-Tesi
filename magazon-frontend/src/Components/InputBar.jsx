@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "../css/InputBar.css"
 function InputBar() {
     
     const handleSubmit = (event) => {

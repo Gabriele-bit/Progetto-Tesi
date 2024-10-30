@@ -1,0 +1,38 @@
+
+#message {
+    font-size: 50px;
+  }
+
+  .input-box {
+    font-size: 20px;
+    padding: 10px;
+     border-radius: 20px;
+     border: 1px solid rgb(141, 141, 141);
+     width: 700px;
+     outline: none;
+  }
+  
+  .input-box::placeholder {
+    color: #888;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .navbar-logo {
+      animation: navbar-logo-run 1.5s ease-out forwards;
+      width: 200px;
+    }
+  }
+  
+  @keyframes navbar-logo-run {
+    0% {
+      transform:  translateX(-300%)rotate(0deg);;
+    }
+  
+    50% {
+      transform: translateX(100%) rotate(360deg);;
+    }
+  
+    100% {
+      transform:translateX(10%) rotate(0deg);;
+    }
+  }

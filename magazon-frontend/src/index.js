@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Products from './Components/Products';
-
+import Product from './Components/Product';
+import { ProductProvider } from './Store/ProductsContext';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,10 +32,10 @@ const router = createBrowserRouter([
     path: "/About",
     element: <App></App>,
   },
-  // {
-  //   path: "/singlecard/:cardID",
-  //   element: <SingleCard />,
-  // },
+  {
+    path: "/Prodotto/:product_id",
+    element: <Product />,
+  },
   // {
   //   path: "/CardChildren",
   //   element: <CardChildren></CardChildren>,
@@ -49,10 +50,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <BrowserRouter>
-    <App />
-  </BrowserRouter> */}
-  <RouterProvider router={router} />
+    <ProductProvider>
+      <RouterProvider router={router} />
+    </ProductProvider>
   </React.StrictMode>
 );
 

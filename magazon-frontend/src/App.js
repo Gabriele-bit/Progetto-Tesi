@@ -1,7 +1,7 @@
-
 import './css/App.css';
 import NavBar from './Components/NavBar';
 import InputBar from './Components/InputBar';
+
 function App() {
   return (
     <>

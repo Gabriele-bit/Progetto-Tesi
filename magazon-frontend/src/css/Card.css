@@ -1,4 +1,4 @@
-.product-card {
+/* .product-card {
     flex: 0 1 300px;
     margin: 10px; 
     border: 1px solid #e0e0e0; 
@@ -7,7 +7,7 @@
     background-color: white; 
     text-align: left;
     padding: 20px;
-}
+} */
 
 .product-card:hover {
     cursor: pointer; 
