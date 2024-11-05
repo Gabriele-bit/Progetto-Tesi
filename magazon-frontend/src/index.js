@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Products from './Components/Products';
 import Product from './Components/Product';
 import { ProductProvider } from './Store/ProductsContext';
+import NotFound from './Components/NotFound';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,16 +37,10 @@ const router = createBrowserRouter([
     path: "/Prodotto/:product_id",
     element: <Product />,
   },
-  // {
-  //   path: "/CardChildren",
-  //   element: <CardChildren></CardChildren>,
-  //   children: [
-  //     {
-  //       path: ":cardID",
-  //       element: <SingleCard></SingleCard>
-  //     },
-  //   ],
-  // }
+  {
+    path: "*",
+    element: <NotFound errorType="Pagina non trovata"/>
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

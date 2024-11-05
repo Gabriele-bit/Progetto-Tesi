@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useProducts } from "../Store/ProductsContext";
 
 function Products() {
-    const  {products, setProducts}  = useProducts();
+    const { products, setProducts } = useProducts();
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
@@ -50,17 +50,16 @@ function Products() {
                     ))}
                 </select>
                 <input className="searchBar" type="text" placeholder="Cosa vuoi cercare?" value={searchTerm} onChange={handleChange}></input>
-                <button type="submit"> 🔍</button>
             </div>
             <div className="CardsContainer">
 
-             {/* <Link to={`/Prodotto/1`} key={1} className="link">
+                {/* <Link to={`/Prodotto/1`} key={1} className="link">
                     <Card
                         name={"alpaca"}
                         price={100}
                         category_name={2}
                         description={""}
-                        image_url={""}>
+                        image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
                     </Card>
                 </Link>
                 <Link to={`/Prodotto/2`} key={2} className="link">
@@ -69,7 +68,7 @@ function Products() {
                         price={100}
                         category_name={2}
                         description={""}
-                        image_url={""}>
+                        image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
                     </Card>
                 </Link> */}
                 {filteredProducts.length > 0 ? (
@@ -80,12 +79,12 @@ function Products() {
                                 price={product.price}
                                 category_name={product.category.category_name}
                                 description={product.description}
-                                image_url={product.imageUrl}>
+                                image_url={product.image_url}>
                             </Card>
                         </Link>
                     ))
                 ) : (
-                    <p className="noProducts">Non esiste questo prodotto.. :( </p>
+                    <p className="noProducts">Nessun prodotto.. :( </p>
                 )}
             </div>
         </>

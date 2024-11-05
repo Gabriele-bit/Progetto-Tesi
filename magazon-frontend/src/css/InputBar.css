@@ -1,38 +1,92 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin-top: 50px;
+}
 
-#message {
-    font-size: 50px;
+.input-container {
+  width: 700px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.input-box {
+  flex: 1;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(141, 141, 141);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-box:hover {
+  border-color: #feda8c;
+}
+
+.input-box::placeholder {
+  color: #888;
+}
+
+.logo {
+  width: 200px;
+  margin-top: 1%;
+  transition: 0.3s;
+  animation: logo-run 3s;
+}
+
+@keyframes logo-run {
+  0% {
+    transform: translateX(0%) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(-50%) rotate(-180deg);
+  }
+
+  50% {
+    transform: translateX(50%) rotate(180deg);
+  }
+
+  75% {
+    transform: translateX(-25%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translateX(0%) rotate(0deg);
+  }
+}
+
+
+
+@media (max-width:768px) {
+  .input-container {
+    width: 450px;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width:480px) {
+  .home {
+    margin-top: 20px;
+  }
+
+  .input-container {
+    width: 300px;
+    transition: 0.3s;
   }
 
   .input-box {
-    font-size: 20px;
-    padding: 10px;
-     border-radius: 20px;
-     border: 1px solid rgb(141, 141, 141);
-     width: 700px;
-     outline: none;
+    font-size: 16px;
   }
-  
-  .input-box::placeholder {
-    color: #888;
+
+  .logo {
+    width: 150px;
+    transition: 0.3s;
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .navbar-logo {
-      animation: navbar-logo-run 1.5s ease-out forwards;
-      width: 200px;
-    }
-  }
-  
-  @keyframes navbar-logo-run {
-    0% {
-      transform:  translateX(-300%)rotate(0deg);;
-    }
-  
-    50% {
-      transform: translateX(100%) rotate(360deg);;
-    }
-  
-    100% {
-      transform:translateX(10%) rotate(0deg);;
-    }
-  }
+}

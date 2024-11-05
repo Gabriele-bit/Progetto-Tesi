@@ -10,7 +10,7 @@ function Card(props) {
             <p className="product-category">{category_name}</p>
             <p className="product-price">€{price.toFixed(2)}</p>
             <p className="product-description">{description}</p>
-            <button className="add-to-cart-button">Aggiungi al Carrello</button>
+            <button className="add-to-cart-button">🛒Aggiungi al Carrello</button>
         </div>
     );
 }

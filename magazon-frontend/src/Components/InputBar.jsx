@@ -9,9 +9,8 @@ function InputBar() {
         event.target.elements[0].value = "";
     };
     return (
-        <div class="App">
-            <img src="/logo_transparent.png" alt="Magazon Logo" className="navbar-logo" />
-            <p id="message">Benvenuto in Magazon</p>
+        <div class="home">
+            <img src="/logo_transparent.png" alt="Magazon Logo" className="logo" />
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
                     <input type="text" className="input-box" placeholder="Come posso aiutarti?"></input>
