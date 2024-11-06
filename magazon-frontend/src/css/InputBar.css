@@ -37,37 +37,18 @@
   width: 200px;
   margin-top: 1%;
   transition: 0.3s;
-  animation: logo-run 3s;
+  animation: logo-run 1s  ;
 }
 
 @keyframes logo-run {
-  0% {
-    transform: translateX(0%) rotate(0deg);
+  0%{
+    transform: rotate(0deg)scale(50%);
+
   }
 
-  25% {
-    transform: translateX(-50%) rotate(-180deg);
-  }
+  100%{
+    transform: rotate(360deg) scale(100%);
 
-  50% {
-    transform: translateX(50%) rotate(180deg);
-  }
-
-  75% {
-    transform: translateX(-25%) rotate(-90deg);
-  }
-
-  100% {
-    transform: translateX(0%) rotate(0deg);
-  }
-}
-
-
-
-@media (max-width:768px) {
-  .input-container {
-    width: 450px;
-    transition: 0.3s;
   }
 }
 
