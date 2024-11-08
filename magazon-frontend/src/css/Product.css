@@ -11,13 +11,13 @@
 }
 
 
-.img{
+.img {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.product-img{
+.product-img {
     width: 50%;
     height: auto;
 }
@@ -25,12 +25,10 @@
 .details {
     flex: 1;
     border-left: 2px solid rgba(0, 0, 0, 0.28);
-    max-width: 50%; 
+    max-width: 50%;
     text-align: center;
     padding: 10px;
 }
-
-
 
 .singleProduct-name {
     font-weight: bold;
@@ -40,14 +38,14 @@
 .singleProduct-description {
     font-size: 1rem;
     color: #555;
-    white-space: normal; 
-    word-wrap: break-word; 
+    white-space: normal;
+    word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 100%;
 }
 
 .singleProduct-price {
-    color: #d4af37; 
+    color: #d4af37;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -66,71 +64,44 @@
     justify-content: center;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 10px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.buyButton {
-    background-color: #4CAF50; 
-    color: white;
-}
-
-.buyButton:hover {
-    background-color: #45a049;
-}
-
-.wishlistButton {
-    background-color: #feda8c; 
-}
-
-.wishlistButton:hover {
-    background-color: #dabd7e;
-}
-
-
 
 @media (max-width: 480px) {
     .singleProduct {
-        flex-direction: column; 
+        flex-direction: column;
         max-width: 90vw;
         padding: 15px;
         gap: 10px;
     }
-    
-    .img, .details {
-        max-width: 100%; 
+
+    .img,
+    .details {
+        max-width: 100%;
     }
-    
-    .details{
+
+    .details {
         border: none;
         border-top: 2px solid rgba(0, 0, 0, 0.28);
     }
+
     .product-img {
-        width: 80%; 
+        width: 80%;
     }
-    
+
     .singleProduct-name {
         font-size: 1.2rem;
     }
-    
+
     .singleProduct-description,
     .singleProduct-price,
     .singleProduct-category {
         font-size: 0.9rem;
     }
-    
+
     .buttons {
         flex-direction: column;
         width: 100%;
     }
-    
+
     button {
         width: 100%;
     }

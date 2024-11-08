@@ -7,7 +7,6 @@
 
 .title {
   flex: 1;
-  font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   font-weight: bold;
   color: #f8f9fa;
@@ -22,7 +21,6 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  
 }
 
 ul {
@@ -41,7 +39,7 @@ li {
 }
 
 li a {
-  color: #cdcdcd;
+  color: #ffffff;
   text-decoration: none;
   padding: 14px 20px;
   display: block;
@@ -51,7 +49,7 @@ li a:hover {
   border-bottom: 4px solid #feda8c;
   font: 10px;
   color: #feda8c;
-  transition: color 0.3s , border-bottom 0.3s ;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 li a.active {
@@ -59,14 +57,17 @@ li a.active {
   color: #feda8c;
 }
 
-@media (max-width:480px){
-  .title{
+
+@media (max-width:480px) {
+  .title {
     font-size: 1.8rem;
   }
+
   ul {
-    padding: 5px 0; 
+    padding: 5px 0;
   }
+
   li a {
-    padding: 10px 15px; 
+    padding: 10px 15px;
   }
 }

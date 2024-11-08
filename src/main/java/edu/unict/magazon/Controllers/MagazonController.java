@@ -3,13 +3,14 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
-// import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.unict.magazon.MagazonNPLService;
-import edu.unict.magazon.MagazonFunctions;
+
+import edu.unict.magazon.Services.MagazonFunctions;
+import edu.unict.magazon.Services.MagazonNPLService;
+
 import org.springframework.http.ResponseEntity;
 
 @Controller

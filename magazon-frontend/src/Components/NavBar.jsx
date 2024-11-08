@@ -26,6 +26,9 @@ function NavBar() {
                     <li>
                         <NavLink to={"/About"} activeClassName="active">About</NavLink>
                     </li>
+                    <li>
+                        <NavLink to={"/Login"} activeClassName="active" >Login/Registrati</NavLink>
+                    </li>
                 </ul>
             </div>
         </>

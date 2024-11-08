@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Products from './Components/Products';
 import Product from './Components/Product';
 import { ProductProvider } from './Store/ProductsContext';
+import Login from './Components/Login';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     path: "/Prodotto/:product_id",
     element: <Product />,
   },
+  {
+    path: "/Login",
+    element: <Login></Login>
+  }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

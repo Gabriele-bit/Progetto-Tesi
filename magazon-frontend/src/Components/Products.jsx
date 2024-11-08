@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import Card from "./Card";
 import "../css/Products.css";
-import { Link } from 'react-router-dom';
 import { useProducts } from "../Store/ProductsContext";
 
 function Products() {
@@ -22,7 +21,6 @@ function Products() {
             })
             .catch(error => console.error('Errore nel recupero delle categorie:', error));
     }, []);
-
 
     const changeCategory = (e) => {
         setSelectedCategory(e.target.value);
@@ -53,7 +51,7 @@ function Products() {
             </div>
             <div className="CardsContainer">
 
-                {/* <Link to={`/Prodotto/1`} key={1} className="link">
+              
                     <Card
                         name={"alpaca"}
                         price={100}
@@ -61,8 +59,7 @@ function Products() {
                         description={""}
                         image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
                     </Card>
-                </Link>
-                <Link to={`/Prodotto/2`} key={2} className="link">
+                
                     <Card
                         name={"alpaca"}
                         price={100}
@@ -70,18 +67,17 @@ function Products() {
                         description={""}
                         image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
                     </Card>
-                </Link> */}
+       
                 {filteredProducts.length > 0 ? (
                     filteredProducts.map(product => (
-                        <Link to={`/Prodotto/${product.product_id}`} className="link" key={product.product_id}>
-                            <Card
-                                name={product.name}
-                                price={product.price}
-                                category_name={product.category.category_name}
-                                description={product.description}
-                                image_url={product.image_url}>
-                            </Card>
-                        </Link>
+                        <Card
+                            id= {product.product_id}
+                            name={product.name}
+                            price={product.price}
+                            category_name={product.category.category_name}
+                            description={product.description}
+                            image_url={product.image_url}>
+                        </Card>
                     ))
                 ) : (
                     <p className="noProducts">Nessun prodotto.. :( </p>

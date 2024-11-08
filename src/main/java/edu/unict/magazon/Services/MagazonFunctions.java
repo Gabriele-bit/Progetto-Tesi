@@ -1,4 +1,4 @@
-package edu.unict.magazon;
+package edu.unict.magazon.Services;
 
 import java.util.Map;
 import java.util.function.Function;

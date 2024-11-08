@@ -1,4 +1,4 @@
-package edu.unict.magazon;
+package edu.unict.magazon.Services;
 
 import java.util.HashMap;
 import java.util.Map;

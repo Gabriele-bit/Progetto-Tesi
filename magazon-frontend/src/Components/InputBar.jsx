@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../css/InputBar.css"
 function InputBar() {
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const userMessage = event.target.elements[0].value;
@@ -10,11 +10,11 @@ function InputBar() {
     };
     return (
         <div class="home">
-            <img src="/logo_transparent.png" alt="Magazon Logo" className="logo" />
-            <form onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <input type="text" className="input-box" placeholder="Come posso aiutarti?"></input>
-                </div>
+            <div className='logo-container'>
+                <img src="/logo_transparent.png" alt="Magazon Logo" className="logo" />
+            </div>
+            <form onSubmit={handleSubmit} className='input-container'>
+                <input type="text" className="input-box" placeholder="Come posso aiutarti?"></input>
             </form>
             <div id="responseMessage"></div>
         </div>
