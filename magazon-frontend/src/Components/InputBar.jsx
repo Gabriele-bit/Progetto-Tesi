@@ -11,7 +11,7 @@ function InputBar() {
     return (
         <div class="home">
             <div className='logo-container'>
-                <img src="/logo_transparent.png" alt="Magazon Logo" className="logo" />
+                <img src="/logo_transparentGIORNO.png" alt="Magazon Logo" className="logo" />
             </div>
             <form onSubmit={handleSubmit} className='input-container'>
                 <input type="text" className="input-box" placeholder="Come posso aiutarti?"></input>

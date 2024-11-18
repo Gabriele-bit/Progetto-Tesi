@@ -6,6 +6,12 @@
 
 body {
   margin: 0;
+  /* background-color: #1b263b ; blu*/
+  background-color: #F4F4F4;
+  /* background-color: #F2E8D5;  sabbia*/
+  /* background-color: #e3d9c6; caramello*/
+
+
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,27 +24,37 @@ code {
     monospace;
 }
 
-button,
-input[type="submit"] {
-  padding: 5px;
+button{
   font-size: 15px;
-  color: #1b263b;
+  color: white;
   outline: none;
-  background-color: #feda8c;
-  border: 1px solid #1b263b;
+  /* background-color: #feda8c; giallo*/
+  background-color: #333333;
+  border: 1px solid black;
+  border-radius: 10px;
   font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 30px;
 }
 
-button:hover,
-input[type="submit"]:hover {
-  background-color: #cbae6e;
-  border: 1px solid black;
+button:hover {
+  /* background-color: #cbae6e; */
+  background-color: #575757;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:active,
-input[type="submit"]:active {
+button:active {
   transform: scale(0.95);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.wishlistButton{
+  color: #333333;
+  background-color: white;
+}
+
+.wishlistButton:hover{
+  color: white;
+  background-color: #333333;
 }

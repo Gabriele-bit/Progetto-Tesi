@@ -9,6 +9,7 @@ public class MagazonProductsModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer product_id;
     private String name;
+    @Column(length = 500)
     private String description;
     private float price;
     private int quantity;

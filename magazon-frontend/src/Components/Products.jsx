@@ -51,27 +51,27 @@ function Products() {
             </div>
             <div className="CardsContainer">
 
-              
-                    <Card
-                        name={"alpaca"}
-                        price={100}
-                        category_name={2}
-                        description={""}
-                        image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
-                    </Card>
-                
-                    <Card
-                        name={"alpaca"}
-                        price={100}
-                        category_name={2}
-                        description={""}
-                        image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
-                    </Card>
-       
+
+                <Card
+                    name={"alpaca"}
+                    price={100}
+                    category_name={2}
+                    description={""}
+                    image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
+                </Card>
+
+                <Card
+                    name={"alpaca"}
+                    price={100}
+                    category_name={2}
+                    description={""}
+                    image_url={"https://www.divertiviaggio.it/wp-content/uploads/2023/03/Esperienze-passeggiate-con-alpaca-lama-Italia.jpg"}>
+                </Card>
+
                 {filteredProducts.length > 0 ? (
                     filteredProducts.map(product => (
                         <Card
-                            id= {product.product_id}
+                            id={product.product_id}
                             name={product.name}
                             price={product.price}
                             category_name={product.category.category_name}

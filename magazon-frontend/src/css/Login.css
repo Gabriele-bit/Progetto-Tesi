@@ -8,7 +8,7 @@
 }
 
 .loginForm {
-    background: linear-gradient(135deg, #ffffff, aliceblue);
+    background: linear-gradient(135deg, #ffffff, rgb(241, 245, 249));
     border: 1px solid rgba(0, 0, 0, 0.187);
     border-radius: 20px;
     padding: 20px;
@@ -16,12 +16,24 @@
     flex-direction: column;
     justify-content: center;
     width: 300px;
-    gap: 10px;
+    gap: 5px;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    color: #333333;
 }
 
-.nameInput,
-.passInput {
+.formHeader{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.formHeader img{
+    width: 35%;
+    height: auto;
+}
+
+.formInput {
     padding: 5px;
     outline: none;
     border-radius: 5px;
@@ -30,8 +42,7 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.nameInput:focus,
-.passInput:focus {
+.formInput:focus {
     outline: none;
     border: 1px solid #5f84c9;
 }
@@ -40,6 +51,12 @@
     margin-top: 20px;
 }
 
-hr {
+.loginContainer hr {
     margin-top: 20px;
+    width: 100%;
+    color: #333333;
+}
+
+ a:active{
+    color: #333333;
 }

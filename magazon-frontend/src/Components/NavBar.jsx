@@ -9,25 +9,25 @@ function NavBar() {
             <div className='navdiv'>
                 <ul>
                     <li>
-                        <NavLink to={"/"} activeClassName="active">Home </NavLink>
+                        <NavLink to={"/"} className={({isActive})=>isActive ? "active":""}>Home </NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Prodotti"} activeClassName="active">Prodotti</NavLink>
+                        <NavLink to={"/Catalogo"} className={({isActive})=>isActive ? "active":""}>Catalogo</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Carrello"} activeClassName="active">Carrello</NavLink>
+                        <NavLink to={"/Carrello"} className={({isActive})=>isActive ? "active":""}>Carrello</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Wishlist"} activeClassName="active">Wishlist</NavLink>
+                        <NavLink to={"/Wishlist"} className={({isActive})=>isActive ? "active":""}>Wishlist</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Profilo"} activeClassName="active">Profilo</NavLink>
+                        <NavLink to={"/Profilo"} className={({isActive})=>isActive ? "active":""}>Profilo</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/About"} activeClassName="active">About</NavLink>
+                        <NavLink to={"/About"} className={({isActive})=>isActive ? "active":""}>About</NavLink>
                     </li>
                     <li>
-                        <NavLink to={"/Login"} activeClassName="active" >Login/Registrati</NavLink>
+                        <NavLink to={"/Login"} className={({isActive})=>isActive ? "active":""} >Login/Registrati</NavLink>
                     </li>
                 </ul>
             </div>
